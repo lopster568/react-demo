@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
-import ocean from "../assets/ocean.mp4";
-import "../App.css";
+import ocean from "../../assets/ocean.mp4";
 
 const RefExample1 = () => {
   const inputRef = useRef(null);

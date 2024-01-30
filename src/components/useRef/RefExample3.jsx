@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import "../App.css";
 
 const RefExample3 = () => {
   const [email, setEmail] = useState("");

@@ -9,13 +9,10 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         {/* style the links below */}
         <div className='link-menu' >
-          <Link className='menu-item' to='/effect/1'>useEffect Example: 1</Link>
-          <Link className='menu-item' to='/effect/2'>useEffect Example: 2</Link>
-          <Link className='menu-item' to='/effect/3'>useEffect Example: 3</Link>
-          <Link className='menu-item' to='/ref/1'>useRef Example: 1</Link>
-          <Link className='menu-item' to='/ref/2'>useRef Example: 2</Link>
-          <Link className='menu-item' to='/ref/3'>useRef Example: 3</Link>
+          <Link className='menu-item' to='/effect'>useEffect Examples</Link>
+          <Link className='menu-item' to='/ref'>useRef Examples</Link>
           <Link className='menu-item' to='/memo'>useMemo Example</Link>
+          <Link className='menu-item' to='/context'>context API Example</Link>
         </div>
       </header>
     </div>

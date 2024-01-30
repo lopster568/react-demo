@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import "../App.css";
 
 const RefExample2 = () => {
   const countRef = useRef(0);
