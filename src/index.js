@@ -18,6 +18,7 @@ import RefExample3 from './components/useRef/RefExample3';
 import Context from './components/useContext/context';
 import Effect from './components/useEffect/effect';
 import Ref from './components/useRef/ref';
+import AxiosExample from './components/axios/axiosExample';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -50,6 +51,7 @@ root.render(
         <Route path="/memo" element={<MemoExample />} />
         <Route path="/reducer" element={<ReducerExample />} />
         <Route path="/fetch" element={<FetchExample />} />
+        <Route path="/axios" element={<AxiosExample />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
