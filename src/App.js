@@ -13,6 +13,7 @@ function App() {
           <Link className='menu-item' to='/ref'>useRef Examples</Link>
           <Link className='menu-item' to='/memo'>useMemo Example</Link>
           <Link className='menu-item' to='/context'>context API Example</Link>
+          <Link className='menu-item' to='/cart'>Cart (Redux) Example</Link>
         </div>
       </header>
     </div>

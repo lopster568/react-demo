@@ -18,40 +18,47 @@ import RefExample3 from './components/useRef/RefExample3';
 import Context from './components/useContext/context';
 import Effect from './components/useEffect/effect';
 import Ref from './components/useRef/ref';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import CartRedux from './components/cartReduxExample';
+import CheckoutPage from './components/CheckoutPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
+    <Provider store={store} >
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
 
-        <Route path="/" element={<App />} />
+          <Route path="/ref">
+            <Route path="" element={<Ref />} />
+            <Route path="1" element={<RefExample1 />} />
+            <Route path="2" element={<RefExample2 />} />
+            <Route path="3" element={<RefExample3 />} />
+          </Route>
 
-        <Route path="/ref">
-          <Route path="" element={<Ref />} />
-          <Route path="1" element={<RefExample1 />} />
-          <Route path="2" element={<RefExample2 />} />
-          <Route path="3" element={<RefExample3 />} />
-        </Route>
+          <Route path="/effect"  >
+            <Route path='' element={<Effect />} />
+            <Route path="1" element={<EffectExample1 />} />
+            <Route path="2" element={<EffectExample2 />} />
+            <Route path="3" element={<EffectExample3 />} />
+          </Route>
 
-        <Route path="/effect"  >
-          <Route path='' element={<Effect />} />
-          <Route path="1" element={<EffectExample1 />} />
-          <Route path="2" element={<EffectExample2 />} />
-          <Route path="3" element={<EffectExample3 />} />
-        </Route>
+          <Route path="/context" >
+            <Route path='' element={<Context />} />
+            <Route path="1" element={<ContextExample1 />} />
+            <Route path="2" element={<ContextExample2 />} />
+          </Route>
 
-        <Route path="/context" >
-          <Route path='' element={<Context />} />
-          <Route path="1" element={<ContextExample1 />} />
-          <Route path="2" element={<ContextExample2 />} />
-        </Route>
-
-        <Route path="/memo" element={<MemoExample />} />
-        <Route path="/reducer" element={<ReducerExample />} />
-        <Route path="/fetch" element={<FetchExample />} />
-      </Routes>
-    </BrowserRouter>
+          <Route path="/memo" element={<MemoExample />} />
+          <Route path="/reducer" element={<ReducerExample />} />
+          <Route path="/fetch" element={<FetchExample />} />
+          <Route path="/cart" element={<CartRedux />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 
