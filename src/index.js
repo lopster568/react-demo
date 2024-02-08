@@ -23,6 +23,7 @@ import { persistor, store } from './redux/store';
 import CartRedux from './components/cartReduxExample';
 import CheckoutPage from './components/CheckoutPage';
 import { PersistGate } from 'redux-persist/integration/react';
+import AxiosExample from './components/axios/axiosExample';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
