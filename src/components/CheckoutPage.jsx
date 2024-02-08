@@ -7,7 +7,7 @@ const CheckoutPage = () => {
     <div>
       {cart.map((item) => (
         <div key={item.id}>
-          {item.name} - {item.price}
+          {item.name} - {item.price}$
         </div>
       ))}
     </div>

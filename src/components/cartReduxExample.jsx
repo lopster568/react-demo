@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../redux/cart/cart.actions";
+import { Link } from "react-router-dom";
 
 const CartRedux = () => {
   const cart = useSelector((state) => state.cart);
@@ -29,12 +30,12 @@ const CartRedux = () => {
       >
         Add To Cart
       </button>
-
+        <Link to={"/checkout"} > Checkout Page </Link>
       <div>
         {cart.map((item) => (
           <div key={item.id}>
             <h3>{item.name}</h3>
-            <p>{item.price}</p>
+            <p>{item.price}$</p>
           </div>
         ))}
       </div>
